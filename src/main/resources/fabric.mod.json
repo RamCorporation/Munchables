@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "munchables",
+  "version": "${version}",
+  "name": "Munchables",
+  "description": "Adds a variety of eat times for different items with an data-driven API",
+  "authors": ["RamGames"],
+  "contact": {
+    "repo": "https://github.com/779ha/Munchables"
+  },
+  "license": "MIT",
+  "icon": "assets/munchables/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.ramgames.munchables.Munchables"
+    ]
+  },
+  "mixins": [
+    "munchables.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}
