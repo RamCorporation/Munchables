@@ -27,7 +27,6 @@ public class Munchables implements ModInitializer {
     private static final HashMap<String, Integer> eatTimes = new HashMap<>();
 
     protected static void addEatTime(Pair<Boolean, String> pair, Integer value) {
-        LOGGER.info("adding!");
         String key = pair.getRight();
         if(!eatTimes.containsKey(key)) {
             eatTimes.put(key, value);
@@ -43,7 +42,9 @@ public class Munchables implements ModInitializer {
         LOGGER.info("Munchables is ready to eat!");
         ResourceManagerHelper.get(ResourceType.SERVER_DATA).registerReloadListener(new ModResourceLoader("munchables", (id, json) -> {
             boolean replace = json.get("replace").getAsBoolean();
-            String item = json.get("item").getAsString();
+            String[] splits = id.getPath().split("/");
+            String item = id.getNamespace()+':'+splits[splits.length-1].replace(".json", "");
+            LOGGER.info(item);
             int timing = json.get("eatTime").getAsInt();
             return new Triplet<>(replace, item, timing);
         }));
