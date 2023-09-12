@@ -9,7 +9,7 @@
 <a href="">
 <img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg">
 </a>
-<a href="https://github.com/ramGemes/Munchables">
+<a href="https://github.com/RamCorporation/Munchables">
 <img alt="github" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/github_vector.svg">
 </a>
 <a href="">
@@ -42,3 +42,8 @@ Yes! This mod is fully compatible with all other food mods! Note however that if
 }
 ```
 This example would change the eat time for the item: `namespace:item_id`
+
+## License
+
+---
+This project is under an MIT license
